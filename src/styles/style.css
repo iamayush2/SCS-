@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "LondrinaSolid";
+  src: url(./fonts/LondrinaSolid-Black.ttf);
+}
+@font-face {
+  font-family: "LivvicRegular";
+  src: url(./fonts/Livvic-Regular.ttf);
+}
+@font-face {
+  font-family: "hiMelody";
+  src: url(./fonts/HiMelody-Regular.ttf);
+}
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+section {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  gap: 5vw;
+  width: 100%;
+  height: 15vh;
+  position: sticky;
+  top: 0%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1vw 3vw 0vw 3vw;
+  /* background-color: red; */
+  z-index: 99;
+  /* mix-blend-mode: color-burn; */
+}
+.nav-bar-left {
+  width: 10%;
+  height: inherit;
+  display: none;
+}
+.nav-bar-left img {
+  height: 100%;
+}
+.nav-mid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 2em;
+}
+#logo-left,
+#logo-right {
+  display: flex;
+  width: 20%;
+  justify-content: space-around;
+}
+#logo-left a,
+#logo-right a {
+  text-decoration: none;
+  color: black;
+  text-transform: capitalize;
+}
+#logo-left a h1,
+#logo-right a h1 {
+  font-size: 1.2vw;
+  font-family: sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.logo-img-cont {
+  width: 10%;
+}
+.logo-img-cont img {
+  width: 100%;
+}
+#menu-btn {
+  height: 90%;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #eaeaea;
+  display: none;
+  padding: 1em;
+}
+
+#hamburger {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+  color: black;
+}
+
+#hamburger span {
+  position: absolute;
+  top: 50%;
+  /* transform: traslateY(-50%); */
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: black;
+  transition: transform 0.25s;
+}
+
+#hamburger span::before {
+  position: absolute;
+  content: "";
+  right: 0%;
+  height: 2px;
+  width: 18px;
+  display: inline-block;
+  transform: translateY(-4px);
+  background: black;
+  transition: transform 0.25s;
+}
+
+#hamburger .active span {
+  transform: rotate(45deg);
+}
+
+#hamburger .active span::before {
+  top: unset;
+  width: 24px;
+  transform: rotate(-90deg);
+}
