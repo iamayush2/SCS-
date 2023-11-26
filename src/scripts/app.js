@@ -40,9 +40,9 @@ tl.to(".head-video", {
 tl.to(
   " .head-vid-img-cont video",
   {
-    tansform: "translate(-10% ,-10%)",
-    // width: "89vw",
-    //   height: "89vh",
+    // tansform: "translate(-10% ,-10%)",
+    // // width: "89vw",
+    // //   height: "89vh",
     scale: 1.35,
     duration: 0.1,
     scrollTrigger: {
@@ -132,38 +132,38 @@ textRevel.forEach((char, i) => {
   console.log(text);
   gsap.from(text.chars, {
     opacity: 0.4,
-    // y: 30,
+    y: 30,
     // x: 20,
     color: "black",
-    delay: 0.1,
-    stagger: 0.1,
-    duration: 0.2,
+    delay: 0.5,
+    stagger: 0.5,
+    duration: 1,
     scrollTrigger: {
       trigger: "#first-section #second-section ",
 
       pin: true,
       // markers: true,
-      start: "top -140%",
-      end: "top -160%",
-      scrub: true,
+      start: "top -150%",
+      end: "top -170%",
+      scrub: 0.1,
     },
   });
 });
 
-tl.to(
+tl.from(
   ".mid-right-img",
   {
-    x: 300,
-    transform: "rotate(5deg) ",
-    height: "80%",
-    width: "25%",
-    y: 50,
+    x: -300,
+    transform: "rotate(-2deg) ",
+    height: "87%",
+    width: "30%",
+    // y: 50,
 
     scrollTrigger: {
       trigger: "#-section ",
 
       pin: true,
-      markers: true,
+      // markers: true,
       start: "top -210%",
       end: "top -280%",
       scrub: 1,
@@ -172,20 +172,20 @@ tl.to(
   "a2"
 );
 
-tl.to(
+tl.from(
   ".mid-left-img",
   {
-    x: -290,
-    transform: "rotate(-5deg) ",
-    height: "80%",
-    width: "26%",
-    y: 50,
+    x: 290,
+    transform: "rotate(2deg) ",
+    height: "87%",
+    width: "30%",
+    // y: 50,
 
     scrollTrigger: {
       trigger: "#-section ",
 
       pin: true,
-      markers: true,
+      // markers: true,
       start: "top -210%",
       end: "top -280%",
       scrub: 1,
@@ -193,3 +193,86 @@ tl.to(
   },
   "a2"
 );
+
+tl.to(".fourth-text", {
+  y: -290,
+  transform: "rotate(2deg) ",
+  // height: "87%",
+  // width: "30%",
+  // y: 50,
+
+  scrollTrigger: {
+    trigger: "#-section ",
+
+    // pin: true,
+    // markers: true,
+    start: "top -370%",
+    end: "top -500%",
+    scrub: 1,
+  },
+});
+
+tl.from(
+  ".fifth-mid-right-img",
+  {
+    x: -300,
+    transform: "rotate(-2deg) ",
+    height: "87%",
+    width: "30%",
+    // y: 50,
+
+    scrollTrigger: {
+      trigger: "#-section ",
+
+      pin: true,
+      // markers: true,
+      start: "top -430%",
+      end: "top -500%",
+      scrub: 1,
+    },
+  },
+  "a5"
+);
+
+tl.from(
+  ".fifth-mid-left-img",
+  {
+    x: 290,
+    transform: "rotate(2deg) ",
+    height: "87%",
+    width: "30%",
+    // y: 50,
+
+    scrollTrigger: {
+      trigger: "#-section ",
+
+      pin: true,
+      // markers: true,
+      start: "top -430%",
+      end: "top -500%",
+      scrub: 1,
+    },
+  },
+  "a5"
+);
+
+// tl.from(".seven-section video", {
+//   y: 290,
+//   opacity: 0.1,
+//   transform: "rotate(2deg) ",
+//   height: "87%",
+//   width: "30%",
+//   // y: 50,
+
+//   scrollTrigger: {
+//     trigger: ".seven-section ",
+
+//     pin: true,
+//     markers: true,
+//     start: "top 0%",
+//     // end: "top 50%",
+//     scrub: 2,
+//   },
+// });
+
+tl.scrollTrigger.refresh();
